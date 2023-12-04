@@ -48,9 +48,9 @@ const reactFlowInstance = useReactFlow();
 
       const reactFlowBounds = reactFlowInstance.project({ x: 0, y: 0 });
       const type = event.dataTransfer.getData('application/reactflow');
-      const position = reactFlowInstance.project({
-        x: event.clientX - reactFlowBounds.x,
-        y: event.clientY - reactFlowBounds.y,
+      const position = reactFlowInstance.screenToFlowPosition({
+        x: event.clientX,
+        y: event.clientY,
       });
 
       const newNode = {
