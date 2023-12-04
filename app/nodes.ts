@@ -6,7 +6,7 @@ export default [
     type: 'inputNode',
     data: { 
       label: 'Input',
-      text: 'Text'
+      text: ''
     },
     position: { x: 250, y: 25 },
   },
@@ -15,7 +15,7 @@ export default [
     type: 'outputNode',
     data: { 
       label: 'Output',
-      text: 'Text'
+      text: ''
     },
     position: { x: 250, y: 250 },
     text: '',

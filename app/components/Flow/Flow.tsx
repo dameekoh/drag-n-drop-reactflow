@@ -57,7 +57,10 @@ const reactFlowInstance = useReactFlow();
         id: crypto.randomUUID(),
         type: type === 'Input' ? 'inputNode' : type === 'Output' ? 'outputNode' : 'unknownNode',
         position,
-        data: { label: `${type}` },
+        data: { label: 
+            `${type}`,
+            text: '',
+        },
       };
       useStore.getState().addNode(newNode);
     },

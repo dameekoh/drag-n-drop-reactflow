@@ -51,7 +51,7 @@ const useStore = create<RFState>((set, get) => ({
   },
   onConnect: (connection: Connection) => {
     set({
-      edges: addEdge({ ...connection, animated: true }, get().edges),
+      edges: addEdge({ ...connection, animated: true }, get().edges), // Add the animated property here
     });
   },
   updateText: (id: string, newText: string) => {

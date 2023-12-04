@@ -17,7 +17,7 @@ const NodesLeftPanel = () => {
             <Card key={node.id} className="rounded-none">
                 <CardHeader className="flex gap-3">
                     <div className="flex flex-col">
-                    <p className="text-md">{node.data.label}</p>
+                        <p className="text-md">{node.data.label + ' ' + node.data.text} </p>
                     </div>
                 </CardHeader>
                 <Divider/>
@@ -25,7 +25,7 @@ const NodesLeftPanel = () => {
                     <Input
                         variant="bordered"
                         radius="sm"
-                        label="Text"
+                        label=""
                         value={node.data.text}
                         onChange={(e) => handleInputChange(node.id, e.target.value)}
                     />
