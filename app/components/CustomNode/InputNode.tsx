@@ -22,7 +22,12 @@ export const InputNode: React.FC<CustomNodeProps> = ({ id, data }) => {
 
   return (
     <>
-      <Handle type="source" position={Position.Right} id="a" />
+      <Handle 
+        className="react-flow__handle"
+        type="source" 
+        position={Position.Right} 
+        id="a" 
+      />
       <Card>
       <CardHeader className="flex gap-3">
           <div className="flex flex-col">

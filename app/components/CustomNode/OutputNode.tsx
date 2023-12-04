@@ -40,7 +40,12 @@ export const OutputNode: React.FC<CustomNodeProps> = ({ id, data }) => {
               onChange={handleInputChange}
             />
         </CardBody>
-        <Handle type="target" position={Position.Left} id="b" />
+        <Handle 
+          className="react-flow__handle"
+          type="target" 
+          position={Position.Left} 
+          id="b" 
+        />
         </Card>      
     </>
   );
