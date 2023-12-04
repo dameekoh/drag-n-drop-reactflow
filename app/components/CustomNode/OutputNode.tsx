@@ -2,6 +2,7 @@ import './CustomNode.css';
 import { Input } from '@nextui-org/react';
 import { Handle, Position } from 'reactflow';
 import { Chip, Card, CardHeader, CardBody, Divider } from '@nextui-org/react';
+import useStore from '@/app/store';
 
 type NodeData = {
   label: string;
@@ -13,6 +14,12 @@ interface CustomNodeProps {
 }
 
 export const OutputNode: React.FC<CustomNodeProps> = ({ id, data }) => {
+  const updateText = useStore((state) => state.updateText);
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    updateText(id, event.target.value);
+  };
+  
   return (
     <>
         <div className="chip-wrapper">
@@ -26,7 +33,12 @@ export const OutputNode: React.FC<CustomNodeProps> = ({ id, data }) => {
         </CardHeader>
         <Divider/>
         <CardBody>
-            <Input variant="bordered" radius="sm" label="Text" />
+            <Input 
+              variant="bordered" 
+              radius="sm" 
+              label="Text"
+              onChange={handleInputChange}
+            />
         </CardBody>
         <Handle type="target" position={Position.Left} id="b" />
         </Card>      
