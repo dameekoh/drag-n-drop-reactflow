@@ -21,6 +21,7 @@ type UpdateText = (id: string, newText: string) => void;
 type RFState = {
   nodes: Node[];
   edges: Edge[];
+  addNode: any; // TODO! change later
   onNodesChange: OnNodesChange;
   onEdgesChange: OnEdgesChange;
   onConnect: OnConnect;
@@ -31,6 +32,13 @@ type RFState = {
 const useStore = create<RFState>((set, get) => ({
   nodes: initialNodes,
   edges: initialEdges,
+  addNode: (node: Node) => {
+    set((state) => ({
+      nodes: [...state.nodes, node],
+      edges: [...state.edges],
+    }));
+    console.log(node);
+  },
   onNodesChange: (changes: NodeChange[]) => {
     set({
       nodes: applyNodeChanges(changes, get().nodes),

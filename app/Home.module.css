@@ -1,0 +1,15 @@
+/* Home.module.css */
+.leftPanel {
+    width: 15%;
+    background-color: white;
+}
+
+.centerPanel {
+    width: 70%;
+    background-color: #f3f4f6;
+}
+
+.rightPanel {
+    width: 15%;
+    background-color: white;
+}
