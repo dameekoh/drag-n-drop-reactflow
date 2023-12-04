@@ -18,20 +18,4 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  padding: 1rem;
-}
-
-.leftPanel {
-  width: 15%;
-  background-color: white;
-}
-
-.centerPanel {
-  width: 70%;
-  background-color: #f3f4f6;
-}
-
-.rightPanel {
-  width: 15%;
-  background-color: white;
 }

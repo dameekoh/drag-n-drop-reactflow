@@ -69,19 +69,21 @@ const reactFlowInstance = useReactFlow();
     event.dataTransfer.dropEffect = 'move';
   }, []);
 return (
-    <div style={{ height: 1080 }} onDrop={onDrop} onDragOver={onDragOver}>
-    <ReactFlow
-        nodes={nodes}
-        edges={edges}
-        onNodesChange={onNodesChange}
-        onEdgesChange={onEdgesChange}
-        onConnect={onConnect}
-        nodeTypes={nodeTypes}
-    >
-        <Background 
-            color="grey"
-            variant={BackgroundVariant.Dots} />
-    </ReactFlow>
-    </div>
+    <>
+        <div style={{ height: '100vh', overflow: 'hidden' }} onDrop={onDrop} onDragOver={onDragOver}>
+        <ReactFlow
+            nodes={nodes}
+            edges={edges}
+            onNodesChange={onNodesChange}
+            onEdgesChange={onEdgesChange}
+            onConnect={onConnect}
+            nodeTypes={nodeTypes}
+        >
+            <Background 
+                color="grey"
+                variant={BackgroundVariant.Dots} />
+        </ReactFlow>
+        </div>
+    </>
 );
 }
