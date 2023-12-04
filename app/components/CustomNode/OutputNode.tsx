@@ -1,7 +1,7 @@
 import './CustomNode.css';
 import { Input } from '@nextui-org/react';
 import { Handle, Position } from 'reactflow';
-import { Badge, Card, CardHeader, CardBody, Divider } from '@nextui-org/react';
+import { Chip, Card, CardHeader, CardBody, Divider } from '@nextui-org/react';
 
 type NodeData = {
   label: string;
@@ -15,8 +15,8 @@ interface CustomNodeProps {
 export const OutputNode: React.FC<CustomNodeProps> = ({ id, data }) => {
   return (
     <>
-        <div className="badge-wrapper">
-            <Badge className="custom-badge" color="primary">Output</Badge>
+        <div className="chip-wrapper">
+            <Chip>Output</Chip>
         </div>
         <Card>
         <CardHeader className="flex gap-3">
