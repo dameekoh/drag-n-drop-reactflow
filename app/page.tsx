@@ -14,7 +14,7 @@ const nodeSize = {
 
 export default function Home() {
   return (
-    <main style={{ display: 'flex', height: '100vh' }}>
+    <main className={styles.gridContainer}>
       <div className={styles.leftPanel}>
         <NodesLeftPanel />
       </div>

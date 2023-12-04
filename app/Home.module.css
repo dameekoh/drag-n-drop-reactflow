@@ -1,15 +1,24 @@
 /* Home.module.css */
-.leftPanel {
-    width: 15%;
+.gridContainer {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-areas:
+      'leftPanel centerPanel rightPanel';
+  }
+  
+  .leftPanel {
+    grid-area: leftPanel;
     background-color: white;
-}
-
-.centerPanel {
-    width: 70%;
+  }
+  
+  .centerPanel {
+    grid-area: centerPanel;
     background-color: #f3f4f6;
-}
-
-.rightPanel {
-    width: 15%;
+  }
+  
+  .rightPanel {
+    grid-area: rightPanel;
     background-color: white;
-}
+  }
+  
