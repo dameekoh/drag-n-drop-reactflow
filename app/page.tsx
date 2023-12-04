@@ -1,10 +1,10 @@
 'use client';
 
 import Image from 'next/image'
-import Flow from './components/Flow';
+import Flow from './components/Flow/Flow';
 import { Edge, Node, Position, ReactFlowProvider } from 'reactflow';
 import { Button } from '@nextui-org/react';
-import ButtonGroupRightPanel from './components/ButtonGroupRightPanel';
+import ButtonGroupRightPanel from './components/ButtonGroupRightPanel/ButtonGroupRightPanel';
 const nodeSize = {
   width: 100,
   height: 40,

@@ -16,8 +16,13 @@ import ReactFlow, {
 } from 'reactflow';
 import 'reactflow/dist/style.css';
 import { shallow } from 'zustand/shallow';
-import useStore from '../store';
+import useStore from '../../store';
 import { Bakbak_One } from 'next/font/google';
+import { CustomNode } from '../CustomNode/CustomNode';
+
+const nodeTypes = {
+    customNode: CustomNode,
+};
 
 const selector = (state: any) => ({
     nodes: state.nodes,
@@ -40,6 +45,7 @@ return (
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
+        nodeTypes={nodeTypes}
     >
         <Background 
             color="grey"

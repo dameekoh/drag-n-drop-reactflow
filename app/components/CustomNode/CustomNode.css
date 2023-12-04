@@ -1,0 +1,29 @@
+.custom-node__header {
+    padding: 8px 10px;
+    border-bottom: 1px solid #e2e8f0;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow effect */
+    border-top-left-radius: 8px; /* Rounded upper left corner */
+    border-top-right-radius: 8px; /* Rounded upper left corner */
+
+  }
+  
+.custom-node__body {
+padding: 10px;
+background: white;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow effect */
+border-bottom-left-radius: 8px; /* Rounded lower left corner */
+border-bottom-right-radius: 8px; /* Rounded lower left corner */
+
+}
+
+.custom-node__select {
+position: relative;
+margin-bottom: 10px;
+}
+
+.custom-node__select select {
+width: 100%;
+margin-top: 5px;
+font-size: 10px;
+}

@@ -3,19 +3,13 @@ import { Node } from 'reactflow';
 export default [
   {
     id: '1',
-    type: 'input',
+    type: 'customNode',
     data: { label: 'Input' },
     position: { x: 250, y: 25 },
   },
-
   {
     id: '2',
-    data: { label: 'Default' },
-    position: { x: 100, y: 125 },
-  },
-  {
-    id: '3',
-    type: 'output',
+    type: 'customNode',
     data: { label: 'Output' },
     position: { x: 250, y: 250 },
   },
