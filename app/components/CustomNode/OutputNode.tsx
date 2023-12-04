@@ -26,7 +26,7 @@ export const OutputNode: React.FC<CustomNodeProps> = ({ id, data }) => {
         </CardHeader>
         <Divider/>
         <CardBody>
-            <Input className="bg-white" label="Text" />
+            <Input variant="bordered" radius="sm" label="Text" />
         </CardBody>
         <Handle type="target" position={Position.Left} id="b" />
         </Card>      
