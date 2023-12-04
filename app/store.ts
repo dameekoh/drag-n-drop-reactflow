@@ -16,12 +16,15 @@ import {
 import initialNodes from './nodes';
 import initialEdges from './edges';
 
+type UpdateText = (id: string, newText: string) => void;
+
 type RFState = {
   nodes: Node[];
   edges: Edge[];
   onNodesChange: OnNodesChange;
   onEdgesChange: OnEdgesChange;
   onConnect: OnConnect;
+  updateText: UpdateText;
 };
 
 // this is our useStore hook that we can use in our components to get parts of the store and call actions
@@ -42,6 +45,13 @@ const useStore = create<RFState>((set, get) => ({
     set({
       edges: addEdge(connection, get().edges),
     });
+  },
+  updateText: (id: string, newText: string) => {
+    set((state) => ({
+      nodes: state.nodes.map((node) =>
+        node.id === id ? { ...node, data: { ...node.data, text: newText } } : node
+      ),
+    }));
   },
 }));
 
