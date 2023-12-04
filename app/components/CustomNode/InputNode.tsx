@@ -1,9 +1,8 @@
 import './CustomNode.css';
 import { Input } from '@nextui-org/react';
 import { Handle, Position } from 'reactflow';
+import { Badge } from '@nextui-org/react';
 
-// Define your data type according to the structure you'll be using
-// Here's a basic example with just a label string
 type NodeData = {
   label: string;
 };
@@ -13,7 +12,7 @@ interface CustomNodeProps {
   data: NodeData;
 }
 
-export const CustomNode: React.FC<CustomNodeProps> = ({ id, data }) => {
+export const InputNode: React.FC<CustomNodeProps> = ({ id, data }) => {
   return (
     <>
       <Handle type="source" position={Position.Right} id="a" />
@@ -23,7 +22,6 @@ export const CustomNode: React.FC<CustomNodeProps> = ({ id, data }) => {
       <div className="custom-node__body">
         <Input className="bg-white" label="Text" />
       </div>
-      <Handle type="target" position={Position.Left} id="b" />
     </>
   );
 };

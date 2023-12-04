@@ -18,10 +18,12 @@ import 'reactflow/dist/style.css';
 import { shallow } from 'zustand/shallow';
 import useStore from '../../store';
 import { Bakbak_One } from 'next/font/google';
-import { CustomNode } from '../CustomNode/CustomNode';
+import { InputNode } from '../CustomNode/InputNode';
+import { OutputNode } from '../CustomNode/OutputNode';
 
 const nodeTypes = {
-    customNode: CustomNode,
+    inputNode: InputNode,
+    outputNode: OutputNode,
 };
 
 const selector = (state: any) => ({
