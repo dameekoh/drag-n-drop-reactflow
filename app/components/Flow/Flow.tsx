@@ -1,27 +1,15 @@
 // 'use client';
 
 import React from 'react';
-import { useCallback, useState } from 'react';
 import ReactFlow, {
-  addEdge,
   Background,
   BackgroundVariant,
-  Node,
-  Edge,
-  applyNodeChanges,
-  applyEdgeChanges,
-  OnNodesChange,
-  OnEdgesChange,
-  OnConnect,
   useReactFlow,
 } from 'reactflow';
 import 'reactflow/dist/style.css';
-import { shallow } from 'zustand/shallow';
 import useStore from '../../store';
-import { Bakbak_One } from 'next/font/google';
 import { InputNode } from '../CustomNode/InputNode';
 import { OutputNode } from '../CustomNode/OutputNode';
-import { randomUUID } from 'crypto';
 
 const nodeTypes = {
     inputNode: InputNode,

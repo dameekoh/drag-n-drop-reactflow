@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import useStore from '@/app/store';
-import { Button } from '@nextui-org/react';
-import {Card, CardHeader, CardBody, CardFooter, Divider, Input} from "@nextui-org/react";
+import {Card, CardHeader, CardBody, Divider, Input} from "@nextui-org/react";
 
 const NodesLeftPanel = () => {
     const nodes = useStore((state) => state.nodes);

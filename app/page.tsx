@@ -1,8 +1,7 @@
 'use client';
 
 import Flow from './components/Flow/Flow';
-import { Edge, Node, Position, ReactFlowProvider } from 'reactflow';
-import { Button } from '@nextui-org/react';
+import { ReactFlowProvider } from 'reactflow';
 import ButtonGroupRightPanel from './components/ButtonGroupRightPanel/ButtonGroupRightPanel';
 import NodesLeftPanel from './components/NodesLeftPanel/NodesLeftPanel';
 import styles from './Home.module.css';
