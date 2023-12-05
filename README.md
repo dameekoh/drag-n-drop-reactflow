@@ -10,6 +10,14 @@ This is a [Next.js](https://nextjs.org/) based project demonstrating the functio
 The project can be started using Dockerfile or NPM.
 All the code must be executed in the root folder.
 
+Before starting, you need to clone this project. 
+```bash
+git clone https://github.com/adidukik/drag-n-drop-reactflow
+
+cd drag-n-drop-reactflow
+```
+
+
 #### Docker instructions: 
 Build the image file
 ```bash
@@ -42,3 +50,8 @@ I use modular approach. The app is based on three components:
 * `ButtonGroupRightPanel`
 
 To implement the styling on nodes, I use `CustomNode` component, which can be `InputNode` or `OutputNode`
+
+
+Styling is done using the [NextUI](https://nextui.org/) component library, and modified using Tailwind.
+
+IDs are generated using randomUUI from `crypto`.
