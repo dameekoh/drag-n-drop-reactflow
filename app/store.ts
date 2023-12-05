@@ -13,8 +13,8 @@ import {
   applyEdgeChanges,
 } from 'reactflow';
 
-import initialNodes from './nodes';
-import initialEdges from './edges';
+import initialNodes from './data/nodes';
+import initialEdges from './data/edges';
 
 type UpdateText = (id: string, newText: string) => void;
 
